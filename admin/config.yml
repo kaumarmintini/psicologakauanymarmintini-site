@@ -3,10 +3,6 @@ backend:
   repo: kaumarmintini/psicologakauanymarmintini-site
   branch: main
 
-  branch: main
-  base_url: https://api.netlify.com
-  auth_endpoint: auth
-
 media_folder: "static/uploads"
 public_folder: "/uploads"
 
