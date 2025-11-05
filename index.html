@@ -1,15 +1,37 @@
 <!doctype html>
-<html>
+<html lang="pt-BR">
   <head>
     <meta charset="utf-8" />
-    <title>Admin — Netlify CMS</title>
-    <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Painel Administrativo</title>
+
+    <!-- Carrega Netlify CMS atualizado -->
+    <script src="https://unpkg.com/netlify-cms-app@^2.15.0/dist/netlify-cms.js"></script>
+
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        color: #333;
+      }
+    </style>
   </head>
   <body>
-    <!-- Netlify CMS will mount here -->
+    <p>Carregando painel...</p>
+
     <script>
-      // Netlify CMS will use the config.yml in same folder
-      // No other content needed here for basic setup
+      // Inicializa o Netlify CMS
+      if (window.NetlifyCmsApp) {
+        NetlifyCmsApp.init({
+          configPath: "config.yml",
+        });
+      } else {
+        document.body.innerHTML =
+          "<h3>Erro ao carregar o CMS. Verifique o script no index.html.</h3>";
+      }
     </script>
   </body>
 </html>
