@@ -2,6 +2,7 @@ backend:
   name: github
   repo: kaumarmintini/psicologakauanymarmintini-site
   branch: main
+  auth_scope: repo, public_repo
 
 media_folder: "static/uploads"
 public_folder: "/uploads"
