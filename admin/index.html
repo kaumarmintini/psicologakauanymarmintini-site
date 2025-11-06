@@ -5,13 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Painel Administrativo</title>
 
-    <!-- Decap CMS (substituto do Netlify CMS) -->
+    <!-- Importa o Decap CMS -->
     <script src="https://unpkg.com/decap-cms@latest/dist/decap-cms.js"></script>
   </head>
   <body>
     <script>
-      // Inicializa o CMS
-      CMS.init();
+      // Garante que o CMS seja inicializado
+      if (window.CMS) {
+        window.CMS.init();
+      } else {
+        document.body.innerHTML = "<h2 style='color:red; text-align:center; margin-top:50px;'>Erro ao carregar o CMS.</h2>";
+      }
     </script>
   </body>
 </html>
